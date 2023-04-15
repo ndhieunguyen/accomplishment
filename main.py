@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 ### SIDEBAR
-st.sidebar.header("Filter")
+st.sidebar.markdown("<h1 style='text-align: center;'>Filter</h1>", unsafe_allow_html=True)
 name = st.sidebar.text_input("Name", "", help="The phrase contained in the name of the accomplishment")
 organizations = [
     "Tuyen Thanh Primary school",
@@ -33,8 +33,9 @@ filter_button = st.sidebar.button("OK")
 
 
 ### MAIN
-st.header("Accomplishment")
-st.subheader("Nguyen Doan Hieu Nguyen")
+# st.header("Accomplishment")
+st.markdown("<h1 style='text-align: center;'>Accomplishment</h1>", unsafe_allow_html=True)
+st.text("Nguyen Doan Hieu Nguyen - ndhieunguyen")
 
 
 @st.cache_data

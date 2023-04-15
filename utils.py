@@ -5,5 +5,7 @@ def make_clickable(link: str):
     return f'<a target="_blank" href="{prefix+link}">{"View"}</a>'
 
 
-def create_clickable_link(name, link):
-    return f'<a target="_blank" href="{prefix+link}">{name}</a>'
+def create_clickable_link(name: str, link: str):
+    if not link.startswith("https"):
+        link = prefix + link
+    return f'<a target="_blank" href="{link}">{name}</a>'
