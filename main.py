@@ -45,7 +45,7 @@ def load_data():
 data = load_data()
 # data["View"] = data["View"].apply(make_clickable)
 data["Name"] = data.apply(lambda x: create_clickable_link(x["Name"], x["Link"]), axis=1)
-data.drop(["Link"], axis=1)
+data = data.drop(["Link"], axis=1)
 
 
 if filter_button:
