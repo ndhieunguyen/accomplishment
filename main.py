@@ -2,13 +2,14 @@ import streamlit as st
 import pandas as pd
 import datetime
 
+from utils import make_clickable
+
 
 ### Config
 st.set_page_config(
     page_title="Accomplishment ndhieunguyen",
     page_icon="🏆",
 )
-
 
 ### SIDEBAR
 st.sidebar.header("Filter")
@@ -39,16 +40,20 @@ st.subheader("Nguyen Doan Hieu Nguyen")
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("accomplishment.csv")
+    return pd.read_csv("accomplishment.csv", index_col=0)
 
 
 data = load_data()
-
+data["View"] = data["View"].apply(make_clickable)
+data = data.to_html(escape=False)
+    
 if filter_button:
     data = data[data["Name"].str.contains(name)]
     if len(organization) > 0:
         for org in organization:
             data = data[data["Organization"].str.contains(org)]
-    st.dataframe(data=data, use_container_width=True)
+    # st.dataframe(data=data, use_container_width=True)
+    st.write(data, unsafe_allow_html=True)
 else:
-    st.dataframe(data=data, use_container_width=True)
+    # st.dataframe(data=data, use_container_width=True)
+    st.write(data, unsafe_allow_html=True)
