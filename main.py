@@ -19,6 +19,7 @@ organizations = [
     "Kien Tuong High school",
     "FPT University",
     "Coursera",
+    "Kaggle",
 ]
 organization = st.sidebar.multiselect(
     "Organization",
@@ -62,17 +63,15 @@ if filter_button:
             data = data[data["Organization"].str.contains(org)]
     # st.dataframe(data=data, use_container_width=True)
     data = data.sort_values(by=sorted_by)
-    data = data.to_html(escape=False)
-    st.write(data, unsafe_allow_html=True)
+    st.write(data.to_html(escape=False), unsafe_allow_html=True)
 else:
     # st.dataframe(data=data, use_container_width=True)
-    data = data.to_html(escape=False)
-    st.write(data, unsafe_allow_html=True)
+    st.write(data.to_html(escape=False), unsafe_allow_html=True)
 
 st.download_button(
     label="Download accomplishments as CSV",
     # data=data.to_csv().encode("utf-8"),
-    data=data,
+    data=data.to_csv().encode("utf-8"),
     file_name="ndhieunguyen_accomplishment.csv",
     mime="text/csv",
 )
