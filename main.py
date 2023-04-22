@@ -38,6 +38,16 @@ sorted_by = st.sidebar.multiselect(
 
 filter_button = st.sidebar.button("OK")
 
+st.markdown(
+    """
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ndhieunguyen" data-version="v1">
+        <a class="badge-base__link LI-simple-link" href="https://linkedin.com/in/ndhieunguyen?trk=profile-badge">Nguyen Doan Hieu Nguyen</a>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 ### MAIN
 # st.header("Accomplishment")
