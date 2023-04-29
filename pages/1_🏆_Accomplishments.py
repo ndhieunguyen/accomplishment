@@ -6,7 +6,6 @@ from utils import make_clickable, create_clickable_link
 
 ### Config
 st.set_page_config(
-    page_title="Accomplishment ndhieunguyen",
     page_icon="🏆",
 )
 
