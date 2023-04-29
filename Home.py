@@ -17,23 +17,27 @@ st.markdown(
 profile_pages = {
     "Gmail": [
         "mailto:hieunguyen.kientuong@gmail.com",
-        "https://cdn-icons-png.flaticon.com/512/281/281769.png",
-    ],
-    "Github": [
-        "https://github.com/ndhieunguyen",
-        "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png",
     ],
     "Linkedin": [
         "https://linkedin.com/in/ndhieunguyen",
         "https://cdn-icons-png.flaticon.com/512/174/174857.png",
     ],
-    "Hackerrank": [
-        "https://www.hackerrank.com/ndhieunguyen",
-        "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png",
-    ],
     "Facebook": [
         "https://www.facebook.com/ndhieunguyen/",
         "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+    ],
+    "Instagram": [
+        "https://www.instagram.com/ndhieunguyen/",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+    ],
+    "Github": [
+        "https://github.com/ndhieunguyen",
+        "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+    ],
+    "Hackerrank": [
+        "https://www.hackerrank.com/ndhieunguyen",
+        "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/160_Hackerrank_logo_logos-512.png",
     ],
 }
 
@@ -48,12 +52,16 @@ st.sidebar.markdown(
     unsafe_allow_html=True,
 )
 
-col0, col1, col2 = st.sidebar.columns([0.3, 0.2, 1])
+display_icons = ""
 for page, link in profile_pages.items():
-    with col1:
-        st.image(link[1], width=25)
-    with col2:
-        st.markdown(f"[{page}]({link[0]})")
+    display_icons += f'<a href="{link[0]}"> <img src="{link[1]}" width=30> </a>'
+
+
+st.sidebar.markdown(
+    '<div class="grid-container" style="text-align: center;">' + display_icons + "</div>",
+    unsafe_allow_html=True,
+)
+
 
 st.header("Short Bio")
 st.markdown(
