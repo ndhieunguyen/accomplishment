@@ -54,8 +54,7 @@ sorted_by = st.sidebar.multiselect(
     help="The columns by which the data frame is sorted",
 )
 
-filter_button = st.sidebar.button("OK")
-
+filter_button = st.sidebar.button("OK", use_container_width=True)
 
 ### MAIN
 st.markdown("<h1 style='text-align: center;'>Accomplishment</h1>", unsafe_allow_html=True)

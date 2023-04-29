@@ -1,5 +1,8 @@
 [theme]
-primaryColor="#628e90"
-backgroundColor="#f5efe6"
-secondaryBackgroundColor="#b4cde6"
-textColor="#3c2317"
+primaryColor="#e85a4f"
+backgroundColor="#eae7dc"
+secondaryBackgroundColor="#d8c3a5"
+textColor="#8e8d8a"
+
+[server]
+port = 2508

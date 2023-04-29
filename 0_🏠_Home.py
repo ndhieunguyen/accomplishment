@@ -38,19 +38,17 @@ profile_pages = {
 }
 
 st.sidebar.markdown(
-    f'<img src="https://github.com/ndhieunguyen/accomplishment/blob/main/images/ndhieunguyen_nobackground.png" style="margin-bottom: 0; padding-bottom: 0;">',
-    unsafe_allow_html=True,
-)
-
-st.sidebar.markdown(
     """
+    <img src="https://github.com/ndhieunguyen/accomplishment/blob/main/images/ndhieunguyen_nobackground.png?raw=true" style="margin-bottom: 0; padding-bottom: 0; height: auto; max-width: 100%;">
     <h1 style='text-align: center; margin-top: 0; margin-bottom: 0; padding-top: 0'>Hieu Nguyen</h1>
-    <h2 style='text-align: center; margin-top: 0; margin-bottom: 0; padding-top: 0;'>AI major student</h2>
+    <h2 style='text-align: center; margin-top: 0; margin-bottom: 0; padding-top: 0;'>Artifical Intelligence major student</h2>
+    <hr style='text-align: center; margin-top: 0; margin-bottom: 0; padding-top: 0'>
+    <h3 style='text-align: center;'>Contact</h3>
     """,
     unsafe_allow_html=True,
 )
 
-col1, col2 = st.sidebar.columns([0.2, 1])
+col0, col1, col2 = st.sidebar.columns([0.3, 0.2, 1])
 for page, link in profile_pages.items():
     with col1:
         st.image(link[1], width=25)
@@ -70,6 +68,17 @@ st.markdown(
     significant impact in the field of technology, especially Artificial Intelligence.
     """,
 )
+
+st.header("Honors and Awards")
+st.markdown(
+    """
+    - Achieve 100% scholarship at FPT University
+    - Win third prize in FPT University Math Olympic 2022
+    - Achieve FPT University Golden Toad of Engineering Major - Spring 2022
+    - Win first prize at FPT Education Hackathon 2022
+    """,
+)
+
 
 hide_menu_style = """
         <style>
