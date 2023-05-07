@@ -2,7 +2,11 @@ import streamlit as st
 import os
 from utils import show_pdf
 
-file_path = os.path.join("images", "Nguyen_Doan_Hieu_Nguyen___AI_engineer___Resume.pdf")
+st.set_page_config(
+    page_icon="📄",
+)
+
+file_path = os.path.abspath(os.path.join("images", "Nguyen_Doan_Hieu_Nguyen___AI_engineer___Resume.pdf"))
 show_pdf(file_path)
 
 with open(file_path, "rb") as pdf_file:
