@@ -54,8 +54,6 @@ sorted_by = st.sidebar.multiselect(
     help="The columns by which the data frame is sorted",
 )
 
-filter_button = st.sidebar.button("OK", use_container_width=True)
-
 ### MAIN
 st.markdown("<h1 style='text-align: center;'>Accomplishment</h1>", unsafe_allow_html=True)
 
@@ -67,42 +65,43 @@ def load_data():
     return data_frame
 
 
-data = load_data()
+original_data = load_data()
 
 
-if filter_button:
-    # filter by name
-    data = data[data["Name"].str.lower().str.contains(name)]
+data = original_data.copy()
 
-    # filter by organization
-    if len(organization) > 0:
-        data = data[data["Organization"].isin(organization)]
+# filter by name
+data = data[data["Name"].str.lower().str.contains(name)]
 
-    # filter by date
-    if len(data) > 0 and from_date and to_date:
-        data = data[(from_date <= data["Date"]) & (data["Date"] <= to_date)]
+# filter by organization
+if len(organization) > 0:
+    data = data[data["Organization"].isin(organization)]
 
-    # sort by
-    data = data.sort_values(by=sorted_by)
+# filter by date
+if len(data) > 0 and from_date and to_date:
+    data = data[(from_date <= data["Date"]) & (data["Date"] <= to_date)]
 
-    # create clickable name
-    if len(data) > 0:
-        data["Name"] = data.apply(lambda x: create_clickable_link(x["Name"], x["Link"]), axis=1)
-    data = data.drop(["Link"], axis=1)
+# sort by
+data = data.sort_values(by=sorted_by)
 
-    # display data frame
-    st.write(data.to_html(escape=False), unsafe_allow_html=True)
-else:
-    data["Name"] = data.apply(lambda x: create_clickable_link(x["Name"], x["Link"]), axis=1)
-    data = data.drop(["Link"], axis=1)
-    st.write(data.to_html(escape=False), unsafe_allow_html=True)
+# create clickable name
+clickable_data = data.copy()
+if len(clickable_data) > 0:
+    clickable_data["Name"] = clickable_data.apply(lambda x: create_clickable_link(x["Name"], x["Link"]), axis=1)
+clickable_data = clickable_data.drop(["Link"], axis=1)
 
-st.download_button(
-    label="Download accomplishments as CSV",
-    data=data.to_csv().encode("utf-8"),
-    file_name="ndhieunguyen_accomplishment.csv",
-    mime="text/csv",
-)
+# display data frame
+st.write(clickable_data.to_html(escape=False), unsafe_allow_html=True, use_container_width=True)
+
+_, col_center, _ = st.columns((2, 1, 2))
+with col_center:
+    st.download_button(
+        label="Download data",
+        data=data.to_csv().encode("utf-8"),
+        file_name="ndhieunguyen_accomplishment.csv",
+        mime="text/csv",
+        use_container_width=True,
+    )
 
 hide_menu_style = """
         <style>
