@@ -80,10 +80,11 @@ st.markdown(
 st.header("Honors and Awards")
 st.markdown(
     """
-    - Achieve 100% scholarship at FPT University
-    - Win third prize in FPT University Math Olympic 2022
-    - Achieve FPT University Golden Toad of Engineering Major - Spring 2022
-    - Win first prize at FPT Education Hackathon 2022
+    - Achieved 100% scholarship at FPT University
+    - Won third prize in FPT University Math Olympic 2022
+    - Achieved FPT University Golden Toad of Engineering Major - Spring 2022
+    - Won first prize at FPT Education Hackathon 2022
+    - Finalist at FPT Eduacation Resfes 2023
     """,
 )
 
