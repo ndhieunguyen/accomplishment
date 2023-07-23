@@ -84,7 +84,7 @@ st.markdown(
     - Won third prize in FPT University Math Olympic 2022
     - Achieved FPT University Golden Toad of Engineering Major - Spring 2022
     - Won first prize at FPT Education Hackathon 2022
-    - Finalist at FPT Eduacation Resfes 2023
+    - Finalist at FPT Education Resfes 2023
     """,
 )
 

@@ -91,7 +91,7 @@ if len(clickable_data) > 0:
 clickable_data = clickable_data.drop(["Link"], axis=1)
 
 # display data frame
-st.write(clickable_data.to_html(escape=False), unsafe_allow_html=True, use_container_width=True)
+st.write(clickable_data.to_html(escape=False), unsafe_allow_html=True)
 
 _, col_center, _ = st.columns((2, 1, 2))
 with col_center:
