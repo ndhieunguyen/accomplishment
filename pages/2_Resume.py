@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="📄",
 )
 
-file_path = os.path.abspath(os.path.join("images", "Nguyen_Doan_Hieu_Nguyen___AI_engineer___Resume.pdf"))
+file_path = os.path.abspath(os.path.join("images", "Nguyen_Doan_Hieu_Nguyen__Resume.pdf"))
 show_pdf(file_path)
 
 with open(file_path, "rb") as pdf_file:
@@ -15,7 +15,7 @@ with open(file_path, "rb") as pdf_file:
 st.sidebar.download_button(
     label="Download Resume",
     data=PDFbyte,
-    file_name="Nguyen_Doan_Hieu_Nguyen___AI_engineer___Resume.pdf",
+    file_name="Nguyen_Doan_Hieu_Nguyen__Resume.pdf",
     mime="application/octet-stream",
 )
 

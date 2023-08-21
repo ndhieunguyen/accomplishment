@@ -68,23 +68,22 @@ st.markdown(
     """
     I am a final-year student at [FPT University](https://hcmuni.fpt.edu.vn/), specializing in Artificial Intelligence, 
     who has excelled academically and earned a full scholarship for studies.\n 
-    I started my academic journey at Tuyen Thanh Primary school, followed by [Vo Duy 
-    Duong Secondary school](https://www.facebook.com/THCSVODUYDUONG), and eventually graduating from [Kien Tuong High School](https://www.facebook.com/KTHSchool). 
-    Currently, I am working as an AI intern at [Gradients Technologies](https://www.linkedin.com/company/gradients-tech/), where i am 
+    I started my academic journey at Tuyen Thanh Primary School, followed by [Vo Duy 
+    Duong Secondary School](https://www.facebook.com/THCSVODUYDUONG), and eventually graduated from [Kien Tuong High School](https://www.facebook.com/KTHSchool). I used to work as an AI intern at [Gradients Technologies](https://www.linkedin.com/company/gradients-tech/), where I was 
     actively involved in research on computer vision and natural language processing. 
-    \n With my passion for AI and dedication to learning, i want to make a 
-    significant impact in the field of technology, especially Artificial Intelligence.
+    \n With my passion for AI and dedication to learning, I want to make a significant impact in the technology field, especially Artificial Intelligence.
     """,
 )
 
 st.header("Honors and Awards")
 st.markdown(
     """
-    - Achieved 100% scholarship at FPT University
-    - Won third prize in FPT University Math Olympic 2022
-    - Achieved FPT University Golden Toad of Engineering Major - Spring 2022
-    - Won first prize at FPT Education Hackathon 2022
-    - Finalist at FPT Education Resfes 2023
+    - 100% Scholarship at FPT University HCM
+    - Third prize of Algebra group in FPT Mathematics Olympic 2022
+    - FPT University Golden Toad of Engineering Major Spring 2022 - the award for the most excellent student in a semester
+    - First prize at FPT Edu Hackathon 2022 - the competition on Algorithm and Blockchain application
+    - Second prize at FPT University HCM Research Festival 2023 - the competition on Scientific Research at FPT University HCM
+    - First prize at FPT Education Research Festival 2023 - the competition on Scientific Research at FPT Education
     """,
 )
 
