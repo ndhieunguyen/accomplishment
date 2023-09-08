@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import datetime
 
-from utils import make_clickable, create_clickable_link
+from utils import create_clickable_link
 
 ### Config
 st.set_page_config(

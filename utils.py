@@ -2,15 +2,16 @@ import base64
 import streamlit as st
 
 prefix = "https://github.com/ndhieunguyen/accomplishment/blob/main/images/"
+postfix = "?raw=true"
 
 
-def make_clickable(link: str):
-    return f'<a target="_blank" href="{prefix+link}">{"View"}</a>'
+# def make_clickable(link: str):
+#     return f'<a target="_blank" href="{prefix+link}">{"View"}</a>'
 
 
 def create_clickable_link(name: str, link: str):
     if not link.startswith("https"):
-        link = prefix + link
+        link = prefix + link + postfix
     return f'<a target="_blank" href="{link}">{name}</a>'
 
 
