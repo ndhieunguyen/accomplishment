@@ -9,6 +9,18 @@ st.set_page_config(
     page_icon="🏆",
 )
 
+
+### DATA
+@st.cache_data
+def load_data():
+    data_frame = pd.read_csv("accomplishment.csv", index_col=0).reset_index(drop=True)
+    data_frame["Date"] = pd.to_datetime(data_frame["Date"], format="%B %Y").dt.date
+    data_frame.sort_values(by=["Date"])
+    return data_frame
+
+
+original_data = load_data()
+
 ### SIDEBAR
 st.sidebar.markdown("<h1 style='text-align: center;'>Tools</h1>", unsafe_allow_html=True)
 name = (
@@ -20,14 +32,7 @@ name = (
     .lower()
     .strip()
 )
-organizations = [
-    "Tuyen Thanh Primary school",
-    "Vo Duy Duong secondary school",
-    "Kien Tuong High school",
-    "FPT University",
-    "Coursera",
-    "Kaggle",
-]
+organizations = sorted(list(set(original_data["Organization"])))
 organization = st.sidebar.multiselect(
     "Organization",
     organizations,
@@ -56,16 +61,6 @@ sorted_by = st.sidebar.multiselect(
 
 ### MAIN
 st.markdown("<h1 style='text-align: center;'>Accomplishment</h1>", unsafe_allow_html=True)
-
-
-@st.cache_data
-def load_data():
-    data_frame = pd.read_csv("accomplishment.csv", index_col=0).reset_index(drop=True)
-    data_frame["Date"] = pd.to_datetime(data_frame["Date"], format="%B %Y").dt.date
-    return data_frame
-
-
-original_data = load_data()
 
 
 data = original_data.copy()
