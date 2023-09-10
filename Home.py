@@ -21,11 +21,11 @@ profile_pages = {
     ],
     "Linkedin": [
         "https://linkedin.com/in/ndhieunguyen",
-        "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+        "https://www.pagetraffic.com/blog/wp-content/uploads/2022/09/linkedin-blue-logo-icon.png",
     ],
     "Facebook": [
         "https://www.facebook.com/ndhieunguyen/",
-        "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+        "https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png",
     ],
     "Instagram": [
         "https://www.instagram.com/ndhieunguyen/",
@@ -33,7 +33,7 @@ profile_pages = {
     ],
     "Github": [
         "https://github.com/ndhieunguyen",
-        "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     ],
     "Hackerrank": [
         "https://www.hackerrank.com/ndhieunguyen",

@@ -12,12 +12,12 @@ show_pdf(file_path)
 with open(file_path, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 
-st.sidebar.download_button(
-    label="Download Resume",
-    data=PDFbyte,
-    file_name="Nguyen_Doan_Hieu_Nguyen__Resume.pdf",
-    mime="application/octet-stream",
-)
+# st.sidebar.download_button(
+#     label="Download Resume",
+#     data=PDFbyte,
+#     file_name="Nguyen_Doan_Hieu_Nguyen__Resume.pdf",
+#     mime="application/octet-stream",
+# )
 
 hide_menu_style = """
         <style>
