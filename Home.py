@@ -81,9 +81,9 @@ st.markdown(
     - [🔗](https://daihoc.fpt.edu.vn/trong-ky-thi-hoc-bong-khong-vi-than-nao-mang-lai-ky-tich-ngoai-ban-than-minh/) 100% Scholarship at FPT University HCM 
     - [🔗](https://www.facebook.com/fptaround/photos/a.403105523145779/4964859586970327/) Third prize of Algebra group in FPT Mathematics Olympic 2022
     - [🔗](https://www.facebook.com/fptaround/photos/a.5010487722407513/5010474842408801) FPT University Golden Toad of Engineering Major Spring 2022 - the award for the most excellent student in a semester 
-    - [🔗](https://fpt.edu.vn/tin-tuc/fpt-edu-tin-tuc-chung/quan-quan-bang-a-fpt-edu-hackathon-2022-vo-oa-cam-xuc-trong-giay-phut-len-ngoi) First prize at FPT Edu Hackathon 2022 - the competition on Algorithm and Blockchain application 
+    - [🔗](https://fpt.edu.vn/tin-tuc/fpt-edu-tin-tuc-chung/quan-quan-bang-a-fpt-edu-hackathon-2022-vo-oa-cam-xuc-trong-giay-phut-len-ngoi) Champion at FPT Edu Hackathon 2022 - the competition on Algorithm and Blockchain application 
     - Second prize at FPT University HCM Research Festival 2023 - the competition on Scientific Research at FPT University HCM
-    - [🔗](https://fpt.edu.vn/tin-tuc/fpt-edu-tin-tuc-chung/du-an-to-mau-cho-phim-don-sac-gianh-ngoi-quan-quan-tieu-ban-cntt-tai-fpt-edu-resfes-2023) First prize at FPT Education Research Festival 2023 - the competition on Scientific Research at FPT Education
+    - [🔗](https://fpt.edu.vn/tin-tuc/fpt-edu-tin-tuc-chung/du-an-to-mau-cho-phim-don-sac-gianh-ngoi-quan-quan-tieu-ban-cntt-tai-fpt-edu-resfes-2023) Champion at FPT Education Research Festival 2023 - the competition on Scientific Research at FPT Education
     """,
 )
 
